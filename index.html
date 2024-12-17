@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.rawgit.com/aframevr/aframe/v0.5.0/dist/aframe-master.min.js"></script>
+    <script src="https://cdn.rawgit.com/kripken/ammo.js/dcab07bf0e7f2b4b64c01dc45da846344c8f50be/builds/ammo.js"></script>
+    <script src="https://cdn.rawgit.com/takahirox/aframe-outline/v1.1.0/build/aframe-outline.min.js"></script>
+    <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.2/build/a-mmd.min.js"></script>
+  </head>
+    <body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker type="pattern" url="marker.patt">
+        <a-entity mmd="">
+          <a-entity rotation="-90 0 0" position="0 0.5 0.5" scale="0.05 0.05 0.05"
+      mmd-model="model:./mmd/otonarin/RinFSV12f; vmd:./motion/walk/A01_SO_女の子歩き_s591_p40.vmd; physics:false; blink:true;"></a-entity> <!-- vmd:./MMDMotion/31.vmd; -->
+  </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
