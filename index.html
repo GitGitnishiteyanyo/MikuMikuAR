@@ -7,16 +7,16 @@
     <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.3/build/a-mmd.min.js"></script>
   </head>
   <body>
-    <a-scene antialias="true" outline>
+    <a-scene antialias="true" outline physics>
       <a-entity position="0 10 20">
         <a-camera></a-camera>
       </a-entity>
       <a-box position="0 0 0" scale="1 1 1" color="grey"></a-box>
-      <a-entity mmd="">
-        <a-entity mmd-model="model:.\mmd\otonarin\RinFSV12f.pmx;
-                             vmd:.\motion\walk\A01_SO_女の子歩き_s591_p40.vmd;"></a-entity>
-      </a-entity>
-  
+      
+      <a-assets>
+        <a-asset-item id="model" src = "otonarin.glb"></a-asset-item>
+      </a-assets>
+  s
     </a-scene>
   </body>
 </html>
