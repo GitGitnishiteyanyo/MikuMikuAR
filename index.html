@@ -10,11 +10,14 @@
     <a-entity position="0 10 20">
       <a-camera></a-camera>
     </a-entity>
-
-    <a-entity mmd="audio:">
-      <a-entity mmd-model="model:./mmd/otonarin/RinFSV12f.pmx;
-                           vmd:./motion/miku.vmd"></a-entity>
-    </a-entity>
+    <a-marker type="pattern" url="img/pattern_simple_qrcode.patt">
+      <a-entity mmd="audio:">
+        <a-entity mmd-model="model:./mmd/otonarin/RinFSV12f.pmx;
+                             vmd:./motion/miku.vmd"></a-entity>
+      </a-entity>
+    </a-marker>
+    
 
   </a-scene>
+  
 </body>
