@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ja">
 <head>
-
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>A-Frame</title>
     <!-- A-Frame ライブラリの読み込み -->
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     <!-- ammo.js ライブラリの読み込み。物理エンジン-->
@@ -13,21 +13,25 @@
     <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.2/build/a-mmd.min.js"></script>
     <!-- AR.js ライブラリの読み込み -->
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
 </head>
+<body style="margin: 0px; overflow:hidden;">
 
-<body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs="debugUIEnabled:false;">
-        <a-entity camera></a-entity>
-        <a-box></a-box>
-        <a-entity mmd="audio:">
-            <a-entity rotation="-90 0 0" position="0 0.5 0.5" scale="0.1 0.1 0.1" mmd-model="model:./mmd/otonarin/RinFSV12f.pmx;
-                               vmd:./motion/miku.vmd"></a-entity>
-        </a-entity>
-        <!-- Markerを表示した際の処理を以下に記述する -->
-        <!-- ARマーカーのファイル名をここで指定する -->
-        
+    <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false" antialias="true" outline> 
+    <a-marker preset="hiro">
+    <a-entity mmd="audio:">
+        <a-entity mmd-model="model:.\mmd\otonarin\RinFSV12f.pmx;
+                             vmd:;
+                             blink:true;"
+                  scale="0.04 0.06 0.05"
+                  position="0 0.1 0">
+      </a-entity>
+    </a-entity>
+    </a-marker>
+    <a-light type="ambient" color="#888"></a-light>
+    <a-light color="#AAA" distance="100" intensity="0.4" type="point"></a-light>
+    <a-entity camera></a-entity>
     </a-scene>
+	
 </body>
-
 </html>
