@@ -28,7 +28,10 @@
       </a-entity>
     </a-entity>
     </a-marker>
-    
+    <a-sky color="#040404" segments-width="16" segments-height="4"></a-sky>
+		<!-- 証明は環境光＆点光源で -->
+		<a-light type="ambient" color="#888"></a-light>
+		<a-light type="point" distance="100" intensity="0.4" color="#DDD" position="0 0 0"></a-light>
     <a-entity camera></a-entity>
     </a-scene>
 	
